@@ -1,6 +1,6 @@
 %define name 	gdis
-%define version 0.86
-%define release %mkrel 2
+%define version 0.89
+%define release %mkrel 1
 
 Summary: 	A molecular and crystal model viewer 
 Name: 		%name
@@ -12,8 +12,8 @@ URL: 		http://gdis.sourceforge.net/
 Source: 	%name-%version-source.tar.bz2
 Source2:	%name-models.tar.bz2
 BuildRoot: 	%_tmppath/%name-root
-BuildRequires: 	MesaGLU-devel libMesaglut-devel gtk2-devel gtkglext-devel
-Requires: 	povray-official ImageMagick openbabel grace
+BuildRequires: 	mesaglu-devel libmesaglut-devel gtk2-devel gtkglext-devel
+Requires: 	povray ImageMagick openbabel grace
 
 %description
 gdis is a graphical program for displaying and manipulating 
@@ -55,7 +55,7 @@ Icon=chemistry_section.png
 Terminal=false
 Type=Application
 Categories=X-MandrivaLinux-MoreApplications-Sciences-Chemistry;Science;Chemistry;
-
+EOF
 
 %post
 %update_menus
@@ -68,7 +68,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr (-,root,root,0755)
-%doc README CHANGELOG TODO GPL.txt models
+%doc README CHANGELOG TODO
 %_bindir/*
 %_menudir/%name
 %_datadir/applications/*
