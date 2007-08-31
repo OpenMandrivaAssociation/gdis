@@ -1,6 +1,6 @@
 %define name 	gdis
 %define version 0.89
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary: 	A molecular and crystal model viewer 
 Name: 		%name
@@ -33,28 +33,16 @@ rm -fr $RPM_BUILD_ROOT
 mkdir -p $RPM_BUILD_ROOT/%_bindir
 make INSTALL=$RPM_BUILD_ROOT/%_bindir install
 
-# menu
-install -d $RPM_BUILD_ROOT%{_menudir}
-cat << EOF > $RPM_BUILD_ROOT%{_menudir}/%{name}
-?package(%{name}):command="gdis"\
-needs="x11"\
-section="More Applications/Sciences/Chemistry"\
-title="Gdis"\
-icon="chemistry_section.png"\
-longtitle="Molecule/crystal viewer"\
-xdg="true"
-EOF
-
 mkdir -p %{buildroot}%{_datadir}/applications
 cat > %{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop << EOF
 [Desktop Entry]
 Name=%{name}
-Comment=%{Summary}
+Comment=A molecular and crystal model viewer
 Exec=%{name} 
 Icon=chemistry_section.png
 Terminal=false
 Type=Application
-Categories=X-MandrivaLinux-MoreApplications-Sciences-Chemistry;Science;Chemistry;
+Categories=Science;Chemistry;
 EOF
 
 %post
@@ -70,6 +58,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr (-,root,root,0755)
 %doc README CHANGELOG TODO
 %_bindir/*
-%_menudir/%name
 %_datadir/applications/*
-
