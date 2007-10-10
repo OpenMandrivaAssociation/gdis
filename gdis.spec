@@ -39,7 +39,7 @@ cat > %{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop << EOF
 Name=%{name}
 Comment=A molecular and crystal model viewer
 Exec=%{name} 
-Icon=chemistry_section.png
+Icon=chemistry_section
 Terminal=false
 Type=Application
 Categories=Science;Chemistry;
