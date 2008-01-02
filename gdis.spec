@@ -11,6 +11,7 @@ Group: 		Sciences/Chemistry
 URL: 		http://gdis.sourceforge.net/
 Source: 	%name-%version-source.tar.bz2
 Source2:	%name-models.tar.bz2
+BuildRoot: 	%_tmppath/%name-root
 BuildRequires: 	mesaglu-devel libmesaglut-devel gtk2-devel gtkglext-devel
 Requires: 	povray ImageMagick openbabel grace
 
