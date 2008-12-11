@@ -13,7 +13,7 @@ Source: 	%name-%version-source.tar.bz2
 Source2:	%name-models.tar.bz2
 BuildRoot: 	%_tmppath/%name-root
 BuildRequires: 	mesaglu-devel libmesaglut-devel gtk2-devel gtkglext-devel
-Requires: 	povray ImageMagick openbabel grace
+Requires: 	povray imagemagick openbabel grace
 
 %description
 gdis is a graphical program for displaying and manipulating 
