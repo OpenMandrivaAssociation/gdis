@@ -1,6 +1,6 @@
 %define name 	gdis
 %define version 0.89
-%define release %mkrel 5
+%define release %mkrel 6
 
 Summary: 	A molecular and crystal model viewer 
 Name: 		%name
