@@ -3,7 +3,7 @@
 Summary: 	A molecular and crystal model viewer 
 Name: 		gdis
 Version: 	0.89
-Release: 	7
+Release: 	8
 License: 	GPL
 Group: 		Sciences/Chemistry
 URL: 		http://gdis.sourceforge.net/
