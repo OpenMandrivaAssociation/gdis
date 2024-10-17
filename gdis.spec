@@ -6,7 +6,7 @@ Version: 	0.89
 Release: 	8
 License: 	GPL
 Group: 		Sciences/Chemistry
-URL: 		http://gdis.sourceforge.net/
+URL: 		https://gdis.sourceforge.net/
 Source: 	%name-%version-source.tar.bz2
 Source2:	%name-models.tar.bz2
 BuildRequires: 	mesaglu-devel pkgconfig(glut) gtk2-devel gtkglext-devel
